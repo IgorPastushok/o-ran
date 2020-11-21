@@ -10,7 +10,7 @@ class IReader {
 public:
     virtual std::string getLabel(uint32_t id)const = 0;
 
-    virtual uint32_t getLabelsNum()const = 0;
+    //virtual uint32_t getLabelsNum()const = 0;
 
     virtual ~IReader() {};
 };

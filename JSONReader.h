@@ -4,10 +4,22 @@
 
 #ifndef O_RAN_JSONREADER_H
 #define O_RAN_JSONREADER_H
+#include "IReader.h"
+#include <fstream>
+#include <cstdio>
+#include <iostream>
 
+class JSONReader: public IReader {
+private:
+    std::string filename;
+public:
+    JSONReader(const std::string &filename);
 
-class JSONReader {
+    std::string getLabel(uint32_t id) const override;
 
+    std::string getQuote() const;
+
+    virtual ~JSONReader(){};
 };
 
 
