@@ -1,9 +1,8 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include "ConsoleWriter.h"
-#include "HTTPWriter.h"
-#include "JSONReader.h"
+#include "writer/ConsoleWriter.h"
+#include "writer/HTTPWriter.h"
+#include "reader/JSONReader.h"
 
 using namespace std;
 
@@ -15,9 +14,9 @@ int main() {
     psbuf = log.rdbuf();
     clog.rdbuf(psbuf);
     clog<< "Start"<<endl;
-    /*ConsoleWriter c;
+    ConsoleWriter c;
     string msg = "hello";
-    c.write(msg);*/
+    c.write(msg);
     HTTPWriter h("127.0.0.1","8080");
     JSONReader r("warcraft-3-quotes.json");
     string res = r.getQuote();
