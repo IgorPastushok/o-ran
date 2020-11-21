@@ -5,11 +5,19 @@
 #ifndef O_RAN_IWRITER_H
 #define O_RAN_IWRITER_H
 #include <string>
+#include <iostream>
 
 class IWriter {
 public:
-    virtual void print(std::string& str) = 0;
+    virtual void write(const std::string &str) const = 0;
+
+    virtual ~IWriter() {};
+
+    IWriter& operator=(const IWriter&) = delete;
 };
 
+inline void IWriter::write(const std::string &str) const{
+    std::cout << str << std::endl;
+}
 
 #endif //O_RAN_IWRITER_H

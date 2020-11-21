@@ -7,7 +7,10 @@
 #include "IWriter.h"
 
 class ConsoleWriter: public IWriter {
+public:
+    void write(const std::string &str) const override;
 
+    virtual ~ConsoleWriter(){};
 };
 
 

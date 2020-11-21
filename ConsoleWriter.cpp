@@ -3,3 +3,9 @@
 //
 
 #include "ConsoleWriter.h"
+
+void ConsoleWriter::write(const std::string &str) const {
+    return IWriter::write(str);
+}
+
+
