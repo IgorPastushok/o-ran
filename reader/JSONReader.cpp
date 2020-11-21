@@ -16,7 +16,7 @@ string JSONReader::getLabel(uint32_t id) const {
 string JSONReader::getQuote() const {
     std::fstream in;
     in.open(filename);
-    uint32_t num = rand() % 10;
+    uint32_t num = 1 + (rand() % 10);
     uint32_t pos = 0;
     uint32_t pos2 = 0;
     uint32_t counter = 0;
