@@ -17,11 +17,11 @@ int main() {
     clog<< "Start"<<endl;
     /*ConsoleWriter c;
     string msg = "hello";
-    c.write(msg);
+    c.write(msg);*/
     HTTPWriter h("127.0.0.1","8080");
-    h.isReachable();*/
     JSONReader r("warcraft-3-quotes.json");
     string res = r.getQuote();
+    h.write(res);
     clog << res << endl;
     clog << "Finish"<<endl;
     clog.rdbuf(backup);
